@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-from CityWarShip.pythonProject2.code.Const import WIN_WIDTH, ENTITY_SPEED
+from CityWarShip.pythonProject2.code.Const import ENTITY_SPEED, WIN_WIDTH
 from CityWarShip.pythonProject2.code.Entity import Entity
 
 
@@ -12,4 +12,3 @@ class Background(Entity):
         self.rect.centerx -= ENTITY_SPEED[self.name]
         if self.rect.right <= 0:
             self.rect.left = WIN_WIDTH
-

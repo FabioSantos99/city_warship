@@ -2,13 +2,11 @@
 # -*- coding: utf-8 -*-
 import sys
 
-import pygame
+import pygame as pygame
 from pygame import Surface, Rect
 from pygame.font import Font
 
-
-
-from CityWarShip.pythonProject2.code.Const import MENU_OPTION, WIN_HEIGHT, WIN_WIDTH
+from CityWarShip.pythonProject2.code.Const import WIN_WIDTH, WIN_HEIGHT, MENU_OPTION
 from CityWarShip.pythonProject2.code.Level import Level
 from CityWarShip.pythonProject2.code.Menu import Menu
 
@@ -18,8 +16,7 @@ class Game:
         pygame.init()
         self.window = pygame.display.set_mode(size=(WIN_WIDTH, WIN_HEIGHT))
 
-    def run(self, ):
-
+    def run(self):
         while True:
             menu = Menu(self.window)
             menu_return = menu.run()
@@ -30,7 +27,3 @@ class Game:
             else:
                 pygame.quit()
                 sys.exit()
-
-
-
-
